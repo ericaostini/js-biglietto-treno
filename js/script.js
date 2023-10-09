@@ -34,6 +34,6 @@ document.getElementById("costo-viaggio").innerHTML = costo;
 
 // sconto del 20% per i minorenni 
 if (eta < 18){
-    let costoMinorenni = costoViaggio * 20/100;
+    let costoMinorenni = (costoViaggio - (costoViaggio * 20/100));
     console.log(costoMinorenni);
 }
