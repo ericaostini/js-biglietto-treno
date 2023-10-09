@@ -33,11 +33,13 @@ if (eta < 18){
     costoViaggio;
 }
 
-costoViaggio = `
+let decimalCost = costoViaggio.toFixed(2);
+console.log(decimalCost);
+
+decimalCost = `
     <div>
-        Il costo del viaggio totale è di ${costoViaggio}
+        Il costo del viaggio totale è di ${decimalCost} euro
     </div>
 `;
-document.getElementById("costo-viaggio").innerHTML = costoViaggio;
-
+document.getElementById("costo-viaggio").innerHTML = decimalCost;
 
