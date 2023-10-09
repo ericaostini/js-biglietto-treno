@@ -4,7 +4,8 @@ let eta = prompt("Età: ");
 
 let biglietto = `
     <div>
-        Voglio percorrere ${km} e ho ${eta} anni
+        Vuoi percorrere ${km} km <br>
+        La tua età è di ${eta} anni
     </div>
 `;
 
@@ -38,7 +39,7 @@ console.log(decimalCost);
 
 decimalCost = `
     <div>
-        Il costo del viaggio totale è di ${decimalCost} euro
+        Il costo del viaggio totale sarà di ${decimalCost} euro
     </div>
 `;
 document.getElementById("costo-viaggio").innerHTML = decimalCost;
