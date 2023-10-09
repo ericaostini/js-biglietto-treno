@@ -18,24 +18,26 @@ if (isNaN(km) || isNaN(eta)){
 
 // calcolo prezzo del viaggio 
 // prezzo fisso per km 0.21 euro al km
-// sconto del 40% per over 65
 
 const pKM = 0.21;
 let costoViaggio = pKM * km;
 console.log(costoViaggio);
 
-let costo = `
+// sconto del 20% per i minorenni 
+// sconto del 40% per over 65
+if (eta < 18){
+    costoViaggio = (costoViaggio - (costoViaggio * 20/100));
+} else if(eta > 65){
+    costoViaggio = (costoViaggio - (costoViaggio * 40/100))
+} else {
+    costoViaggio;
+}
+
+costoViaggio = `
     <div>
         Il costo del viaggio totale è di ${costoViaggio}
     </div>
 `;
-document.getElementById("costo-viaggio").innerHTML = costo;
+document.getElementById("costo-viaggio").innerHTML = costoViaggio;
 
 
-// sconto del 20% per i minorenni 
-if (eta < 18){
-    let costoMinorenni = (costoViaggio - (costoViaggio * 20/100));
-    document.getElementById("minorenni").innerHTML = costoMinorenni;
-} else {
-    console.log("false");
-}
