@@ -25,3 +25,9 @@ const pKM = 0.21;
 let costoViaggio = pKM * km;
 console.log(costoViaggio);
 
+let costo = `
+    <div>
+        Il costo del viaggio totale è di ${costoViaggio}
+    </div>
+`;
+document.getElementById("costo-viaggio").innerHTML = costo;
